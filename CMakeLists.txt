@@ -1,0 +1,10 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 3.5)
+PROJECT(CPPJIEBA-DEMO)
+
+INCLUDE_DIRECTORIES(./cppjieba/include ./cppjieba/deps/limonp/include)
+
+if(NOT DEFINED CMAKE_CXX_STANDARD)
+    set(CMAKE_CXX_STANDARD 11)
+endif()
+ADD_DEFINITIONS(-O3 -Wall -g)
+ADD_EXECUTABLE(demo demo.cpp)
