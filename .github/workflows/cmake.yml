@@ -44,9 +44,9 @@ jobs:
         # run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
         run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-      - name: Demo
+      - name: Demo Test
         working-directory: ${{github.workspace}}/build
         # Execute tests defined by the CMake configuration.  
         # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-        run: ./demo
+        run: ctest -C ${{env.BUILD_TYPE}}
       
