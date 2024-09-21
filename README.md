@@ -10,4 +10,4 @@ cmake --build ./build
 
 cd build
 
-./demo
+ctest --verbose

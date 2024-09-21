@@ -2,18 +2,13 @@
 
 using namespace std;
 
-const char* const DICT_PATH = "../cppjieba/dict/jieba.dict.utf8";
-const char* const HMM_PATH = "../cppjieba/dict/hmm_model.utf8";
-const char* const USER_DICT_PATH = "../cppjieba/dict/user.dict.utf8";
-const char* const IDF_PATH = "../cppjieba/dict/idf.utf8";
-const char* const STOP_WORD_PATH = "../cppjieba/dict/stop_words.utf8";
-
 int main(int argc, char** argv) {
-  cppjieba::Jieba jieba(DICT_PATH,
-        HMM_PATH,
-        USER_DICT_PATH,
-        IDF_PATH,
-        STOP_WORD_PATH);
+  string dict_dir = argv[1];
+  cppjieba::Jieba jieba(dict_dir + "/jieba.dict.utf8",
+        dict_dir + "/hmm_model.utf8",
+        dict_dir + "/user.dict.utf8",
+        dict_dir + "/idf.utf8",
+        dict_dir + "/stop_words.utf8");
   vector<string> words;
   vector<cppjieba::Word> jiebawords;
   string s;
