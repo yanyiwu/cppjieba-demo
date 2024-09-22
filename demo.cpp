@@ -66,5 +66,11 @@ int main(int argc, char** argv) {
   jieba.extractor.Extract(s, keywordres, topk);
   cout << s << endl;
   cout << keywordres << endl;
+
+  cout << "[demo] Keyword Extraction2" << endl;
+  vector<pair<string, double>> keywordres2;
+  jieba.extractor.Extract(s, keywordres2, topk);
+  cout << s << endl;
+  cout << keywordres2 << endl;
   return EXIT_SUCCESS;
 }
