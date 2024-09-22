@@ -3,12 +3,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-  string dict_dir = argv[1];
-  cppjieba::Jieba jieba(dict_dir + "/jieba.dict.utf8",
-        dict_dir + "/hmm_model.utf8",
-        dict_dir + "/user.dict.utf8",
-        dict_dir + "/idf.utf8",
-        dict_dir + "/stop_words.utf8");
+  cppjieba::Jieba jieba;
   vector<string> words;
   vector<cppjieba::Word> jiebawords;
   string s;
