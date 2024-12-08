@@ -5,7 +5,7 @@ include(FetchContent)
 
 FetchContent_Declare(cppjieba
     GIT_REPOSITORY https://github.com/yanyiwu/cppjieba.git
-    GIT_TAG master
+    GIT_TAG dev
 )
 FetchContent_MakeAvailable(cppjieba)
 
